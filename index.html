@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="theme-color" content="#8fc8e5">
+    <title>Plunger Field</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main id="game">
+      <canvas id="world" aria-label="Plunger Field game"></canvas>
+      <div class="sky-wash" aria-hidden="true"></div>
+      <header class="topbar">
+        <div class="brand"><span class="brand-mark">✦</span> PLUNGER FIELD</div>
+        <div class="top-actions">
+          <div class="sound-status" id="sound-status">SOUND ON</div>
+          <button class="icon-button" id="sound-button" aria-label="Toggle sound">♫</button>
+          <button class="icon-button" id="pause-button" aria-label="Pause game">Ⅱ</button>
+        </div>
+      </header>
+      <div class="crosshair" aria-hidden="true"><i></i><b></b></div>
+      <div class="location-tag"><span class="location-dot"></span> SOMEWHERE SUNNY</div>
+      <div class="toast" id="toast" aria-live="polite"></div>
+
+      <aside class="desktop-help" id="desktop-help">
+        <span class="key">W</span><span class="key">A</span><span class="key">S</span><span class="key">D</span>
+        <span class="help-caption">WANDER</span>
+        <span class="key wide">MOUSE</span><span class="help-caption">LOOK</span>
+        <span class="key wide">LEFT</span><span class="help-caption">HIT</span>
+        <span class="key wide">RIGHT</span><span class="help-caption">THROW</span>
+      </aside>
+
+      <div class="mobile-controls" id="mobile-controls">
+        <div class="joystick" id="joystick" aria-label="Move">
+          <div class="joy-ring"></div><div class="joy-knob" id="joy-knob"></div>
+        </div>
+        <div class="mobile-actions">
+          <button class="action-button throw-button" id="throw-button"><span>↗</span><small>SHOOT</small></button>
+          <button class="action-button swing-button" id="swing-button"><span>✦</span><small>SWING</small></button>
+        </div>
+        <div class="look-hint">DRAG TO LOOK</div>
+      </div>
+
+      <section class="start-screen" id="start-screen">
+        <div class="intro-card">
+          <div class="eyebrow"><span></span> YOUR AFTERNOON, YOUR RULES</div>
+          <h1>PLUNGER<br><em>FIELD</em></h1>
+          <p>A little breeze. A big field. One very questionable plunger.</p>
+          <div class="feature-row"><span>☀ OPEN WORLD</span><span>〰 NO OBJECTIVES</span><span>✳ GOOD VIBES</span></div>
+          <button class="play-button" id="play-button">STEP OUTSIDE <span>→</span></button>
+          <div class="start-note">BEST ENJOYED AT YOUR OWN PACE</div>
+        </div>
+      </section>
+
+      <section class="pause-screen hidden" id="pause-screen">
+        <div class="pause-card">
+          <div class="eyebrow"><span></span> TAKE YOUR TIME</div>
+          <h2>PAUSE &<br><em>UNWIND</em></h2>
+          <p>The field will be right here.</p>
+          <button class="play-button" id="resume-button">BACK TO THE FIELD <span>→</span></button>
+        </div>
+      </section>
+
+      <footer class="bottom-note" id="bottom-note">WANDER A LITTLE. SEE WHAT HAPPENS.</footer>
+    </main>
+    <script src="game.js"></script>
+  </body>
+</html>
